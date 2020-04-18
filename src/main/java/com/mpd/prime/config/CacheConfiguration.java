@@ -39,6 +39,23 @@ public class CacheConfiguration {
     @Bean
     public JCacheManagerCustomizer cacheManagerCustomizer() {
         return cm -> {
+            createCache(cm, com.mpd.prime.domain.Banque.class.getName());
+            createCache(cm, com.mpd.prime.domain.Banque.class.getName() + ".comptes");
+            createCache(cm, com.mpd.prime.domain.Compte.class.getName());
+            createCache(cm, com.mpd.prime.domain.Grade.class.getName());
+            createCache(cm, com.mpd.prime.domain.Direction.class.getName());
+            createCache(cm, com.mpd.prime.domain.Corps.class.getName());
+            createCache(cm, com.mpd.prime.domain.Prime.class.getName());
+            createCache(cm, com.mpd.prime.domain.Trimestre.class.getName());
+            createCache(cm, com.mpd.prime.domain.Annee.class.getName());
+            createCache(cm, com.mpd.prime.domain.Agent.class.getName());
+            createCache(cm, com.mpd.prime.domain.Agent.class.getName() + ".comptes");
+            createCache(cm, com.mpd.prime.domain.Fonction.class.getName());
+            createCache(cm, com.mpd.prime.domain.Promotion.class.getName());
+            createCache(cm, com.mpd.prime.domain.Allouer.class.getName());
+            createCache(cm, com.mpd.prime.domain.Avancement.class.getName());
+            createCache(cm, com.mpd.prime.domain.Changement.class.getName());
+            createCache(cm, com.mpd.prime.domain.Affectation.class.getName());
             // jhipster-needle-caffeine-add-entry
         };
     }

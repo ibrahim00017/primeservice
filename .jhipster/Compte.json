@@ -1,0 +1,44 @@
+{
+    "name": "Compte",
+    "fields": [
+        {
+            "fieldName": "numeroCompte",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "statut",
+            "fieldType": "Boolean"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "agent",
+            "otherEntityRelationshipName": "comptes",
+            "relationshipName": "agent",
+            "otherEntityField": "id"
+        },
+        {
+            "relationshipType": "many-to-one",
+            "otherEntityName": "banque",
+            "otherEntityRelationshipName": "comptes",
+            "relationshipName": "banque",
+            "otherEntityField": "id"
+        }
+    ],
+    "changelogDate": "20200418144500",
+    "entityTableName": "compte",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "primeservice",
+    "applications": "*",
+    "microserviceName": "primeservice"
+}

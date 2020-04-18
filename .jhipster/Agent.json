@@ -1,0 +1,118 @@
+{
+    "name": "Agent",
+    "fields": [
+        {
+            "fieldName": "matricule",
+            "fieldType": "Long",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "nom",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "prenoms",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "dateNaiss",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "lieuNaiss",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "contact",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "adresse",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "datePriseServ",
+            "fieldType": "Instant"
+        },
+        {
+            "fieldName": "situationMatrim",
+            "fieldType": "SituationMatrimoniale",
+            "fieldValues": "MARIE,CELIBATAIRE"
+        },
+        {
+            "fieldName": "nombreEnfts",
+            "fieldType": "Integer"
+        },
+        {
+            "fieldName": "statut",
+            "fieldType": "Statut",
+            "fieldValues": "ACE,APE,CDD,OCCASIONNEL,CONVENTIONNE"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "fonction",
+            "otherEntityRelationshipName": "agent",
+            "relationshipName": "fonction",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "direction",
+            "otherEntityRelationshipName": "agent",
+            "relationshipName": "direction",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "grade",
+            "otherEntityRelationshipName": "agent",
+            "relationshipName": "grade",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-one",
+            "otherEntityName": "corps",
+            "otherEntityRelationshipName": "agent",
+            "relationshipName": "corps",
+            "otherEntityField": "id",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "compte",
+            "otherEntityRelationshipName": "agent",
+            "relationshipName": "comptes"
+        }
+    ],
+    "changelogDate": "20200418145200",
+    "entityTableName": "agent",
+    "dto": "no",
+    "pagination": "pagination",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "primeservice",
+    "applications": "*",
+    "microserviceName": "primeservice"
+}

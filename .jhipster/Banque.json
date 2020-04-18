@@ -1,0 +1,56 @@
+{
+    "name": "Banque",
+    "fields": [
+        {
+            "fieldName": "codeBanque",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "nomBanque",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "siegeSocial",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "telephone",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "fax",
+            "fieldType": "String"
+        },
+        {
+            "fieldName": "email",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "compte",
+            "otherEntityRelationshipName": "banque",
+            "relationshipName": "comptes"
+        }
+    ],
+    "changelogDate": "20200418144400",
+    "entityTableName": "banque",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "primeservice",
+    "applications": "*",
+    "microserviceName": "primeservice"
+}

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+    <!--
+        Added the constraints for entity Agent.
+    -->
+    <changeSet id="20200418145200-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="fonction_id"
+                                 baseTableName="agent"
+                                 constraintName="fk_agent_fonction_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="fonction"/>
+
+        <addForeignKeyConstraint baseColumnNames="direction_id"
+                                 baseTableName="agent"
+                                 constraintName="fk_agent_direction_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="direction"/>
+
+        <addForeignKeyConstraint baseColumnNames="grade_id"
+                                 baseTableName="agent"
+                                 constraintName="fk_agent_grade_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="grade"/>
+
+        <addForeignKeyConstraint baseColumnNames="corps_id"
+                                 baseTableName="agent"
+                                 constraintName="fk_agent_corps_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="corps"/>
+
+    </changeSet>
+</databaseChangeLog>

@@ -1,0 +1,29 @@
+{
+    "name": "Grade",
+    "fields": [
+        {
+            "fieldName": "grade",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "indiceBase",
+            "fieldType": "Integer"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200418144600",
+    "entityTableName": "grade",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "primeservice",
+    "applications": "*",
+    "microserviceName": "primeservice"
+}

@@ -1,0 +1,34 @@
+{
+    "name": "Prime",
+    "fields": [
+        {
+            "fieldName": "prime",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required",
+                "unique"
+            ]
+        },
+        {
+            "fieldName": "tauxMensuel",
+            "fieldType": "Double"
+        },
+        {
+            "fieldName": "typePrime",
+            "fieldType": "Typeprime",
+            "fieldValues": "MENSUELLE,TRIMESTRIELLE,SEMESTRIELLE,ANNUELLE"
+        }
+    ],
+    "relationships": [],
+    "changelogDate": "20200418144900",
+    "entityTableName": "prime",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "primeservice",
+    "applications": "*",
+    "microserviceName": "primeservice"
+}
